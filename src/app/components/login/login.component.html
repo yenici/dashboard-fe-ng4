@@ -1,0 +1,46 @@
+<div id="main" role="main" class="animated fadeInDown">
+  <div id="content" class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <div class="well no-padding">
+          <form id="login-form" class="smart-form client-form">
+            <header>
+              Sign In
+            </header>
+            <fieldset>
+              <section>
+                <label class="label">Username</label>
+                <label class="input">
+                  <input type="form-control"
+                         name="email"
+                         ng-model="username"
+                         ng-change="changedUsername(username)"
+                         data-required />
+                  <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your username</b>
+                </label>
+              </section>
+              <section>
+                <label class="label">Password</label>
+                <label class="input"> <i class="icon-append fa fa-lock"></i>
+                  <input type="password" name="password"
+                         data-smart-validate-input
+                         data-required
+                         ng-model="password"
+                         ng-change="changedPassword(password)"
+                         data-minlength="3"
+                         data-maxnlength="20"
+                         data-message="Please enter your email password" />
+                  <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b> </label>
+              </section>
+            </fieldset>
+            <footer>
+              <button type="submit" ng-click="signIn()" class="btn btn-primary">
+                Sign in
+              </button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
